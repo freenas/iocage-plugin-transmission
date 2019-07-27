@@ -9,7 +9,7 @@ sleep 2 # If it's still running, our changes won't propagate, as they're lost on
 
 # Without the whitelist disabled, the user will not be able to access it. They can reenable and manually whitelist their IP's.
 SETTINGS="/usr/local/etc/transmission/home/settings.json"
-echo "Disabling RPC whitelist, you may want to reenable it with the specific IP's you will access transmission with by editing $SETTINGS"
+echo "Disabling RPC whitelist, you may want to reenable it with the specific IP's you will access transmission with by editing $SETTINGS" > /root/PLUGIN_INFO
 sed -i '' 's/    "rpc-whitelist-enabled": true,/    "rpc-whitelist-enabled": false,/' $SETTINGS
 
 #Create a Download Directory
