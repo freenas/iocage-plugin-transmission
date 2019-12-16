@@ -9,7 +9,7 @@ sleep 2 # It can take a few seconds.
 SETTINGS="/usr/local/etc/transmission/home/settings.json"
 
 echo "Disabling RPC whitelist, you may want to reenable it with the specific IP's you will access transmission with by editing $SETTINGS"
-sed -i '' -e 's/\([[::space:]]*"rpc-whitelist-enabled":[[:space:]]*\)true,/\1false,/' $SETTINGS
+sed -i '' -e 's/\([[:space:]]*"rpc-whitelist-enabled":[[:space:]]*\)true,/\1false,/' $SETTINGS
 
 #Create a Download Directory
 mkdir -p /usr/local/etc/transmission/home/Downloads
